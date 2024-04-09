@@ -1,13 +1,13 @@
 [package]
-name = "turn"
+name = "clia-turn"
 version = "0.7.1"
-authors = ["Rain Liu <yliu@webrtc.rs>"]
+authors = ["Rain Liu <yliu@webrtc.rs>, Cris Liao <helloclia@gmail.com>"]
 edition = "2021"
-description = "A pure Rust implementation of TURN"
+description = "A mod of TURN, supporting async auth_handle."
 license = "MIT OR Apache-2.0"
-documentation = "https://docs.rs/turn"
+documentation = "https://docs.rs/clia-turn"
 homepage = "https://webrtc.rs"
-repository = "https://github.com/webrtc-rs/turn"
+repository = "https://github.com/clia-mod/webrtc"
 
 [dependencies]
 util = { version = "0.8.1", path = "../util", package = "webrtc-util", default-features = false, features = ["conn", "vnet"] }
