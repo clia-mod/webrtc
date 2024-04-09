@@ -203,8 +203,9 @@ impl TestAuthHandler {
     }
 }
 
+#[async_trait::async_trait]
 impl turn::auth::AuthHandler for TestAuthHandler {
-    fn auth_handle(
+    async fn auth_handle(
         &self,
         username: &str,
         _realm: &str,

@@ -24,8 +24,9 @@ impl MyAuthHandler {
     }
 }
 
+#[async_trait::async_trait]
 impl AuthHandler for MyAuthHandler {
-    fn auth_handle(
+    async fn auth_handle(
         &self,
         username: &str,
         _realm: &str,

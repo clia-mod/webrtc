@@ -50,8 +50,14 @@ async fn test_allocation_lifetime_overflow() -> Result<()> {
 }
 
 struct TestAuthHandler;
+#[async_trait::async_trait]
 impl AuthHandler for TestAuthHandler {
-    fn auth_handle(&self, _username: &str, _realm: &str, _src_addr: SocketAddr) -> Result<Vec<u8>> {
+    async fn auth_handle(
+        &self,
+        _username: &str,
+        _realm: &str,
+        _src_addr: SocketAddr,
+    ) -> Result<Vec<u8>> {
         Ok(STATIC_KEY.as_bytes().to_vec())
     }
 }
